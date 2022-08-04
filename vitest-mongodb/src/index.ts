@@ -23,19 +23,16 @@ export async function setup(options?: Options) {
 
   debug("Starting setup with options:", { type, serverOptions });
 
-  if (!globalThis.__VITEST_MONGODB_DEFINED__) {
-    debug("Starting mongo memory server");
-    if (type !== "replSet") {
-      globalThis.__MONGO_DB__ = await MongoMemoryServer.create(serverOptions);
-      globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
-    } else {
-      globalThis.__MONGO_DB__ = await MongoMemoryReplSet.create(serverOptions);
-      globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
-    }
-
-    debug("Mongo URI:", globalThis.__MONGO_URI__);
-    globalThis.__VITEST_MONGODB_DEFINED__ = true;
+  debug("Starting mongo memory server");
+  if (type !== "replSet") {
+    globalThis.__MONGO_DB__ = await MongoMemoryServer.create(serverOptions);
+    globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
+  } else {
+    globalThis.__MONGO_DB__ = await MongoMemoryReplSet.create(serverOptions);
+    globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
   }
+
+  debug("Mongo URI:", globalThis.__MONGO_URI__);
 }
 
 export async function teardown() {

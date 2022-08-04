@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "test": "vitest",
+    "test:nothread": "vitest --no-threads",
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
