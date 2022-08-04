@@ -1,4 +1,5 @@
 {
+  "version": "1.0.0",
   "workspaces": [
     "test",
     "vitest-mongodb"
@@ -19,6 +20,5 @@
     "typecheck": "tsc",
     "lint": "eslint ./ --fix",
     "fmt": "prettier --write ."
-  },
-  "packageManager": "yarn@3.2.2"
+  }
 }
