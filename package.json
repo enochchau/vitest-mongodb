@@ -2,7 +2,8 @@
   "version": "1.0.0",
   "workspaces": [
     "example",
-    "vitest-mongodb"
+    "vitest-mongodb",
+    "tests/*"
   ],
   "private": true,
   "license": "MIT",

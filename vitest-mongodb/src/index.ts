@@ -1,4 +1,7 @@
 import { MongoMemoryReplSet, MongoMemoryServer } from "mongodb-memory-server";
+import debugInit from "debug";
+
+const debug = debugInit("vitest-jest");
 
 type Options =
   | {
@@ -18,7 +21,10 @@ export async function setup(options?: Options) {
   const type = options?.type ?? "default";
   const serverOptions = options?.serverOptions;
 
+  debug("Starting setup with options:", { type, serverOptions });
+
   if (!globalThis.__VITEST_MONGODB_DEFINED__) {
+    debug("Starting mongo memory server");
     if (type !== "replSet") {
       globalThis.__MONGO_DB__ = await MongoMemoryServer.create(serverOptions);
       globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
@@ -27,12 +33,15 @@ export async function setup(options?: Options) {
       globalThis.__MONGO_URI__ = globalThis.__MONGO_DB__.getUri();
     }
 
+    debug("Mongo URI:", globalThis.__MONGO_URI__);
     globalThis.__VITEST_MONGODB_DEFINED__ = true;
   }
 }
 
 export async function teardown() {
+  debug("Starting teardown");
   if (globalThis.__MONGO_DB__) {
+    debug("Stopping mongo memory server");
     await globalThis.__MONGO_DB__.stop();
   }
 }

@@ -1,5 +1,5 @@
 {
-  "name": "vitest-mongodb-example",
+  "name": "vitest-mongodb-parallel-2",
   "version": "1.0.0",
   "private": true,
   "scripts": {
