@@ -1,7 +1,7 @@
 import { MongoMemoryReplSet, MongoMemoryServer } from "mongodb-memory-server";
 import debugInit from "debug";
 
-const debug = debugInit("vitest-jest");
+const debug = debugInit(`vitest-jest:${process.env.VITEST_WORKER_ID ?? 0}`);
 
 type Options =
   | {

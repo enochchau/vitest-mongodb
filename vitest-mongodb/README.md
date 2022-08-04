@@ -13,7 +13,9 @@ An example project can be found at [`/example`](/example).
 import { afterAll } from "vitest";
 import { setup, teardown } from "vitest-mongodb";
 
-setup();
+beforeAll(async () => {
+  await setup();
+});
 
 afterAll(async () => {
   await teardown();

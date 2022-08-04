@@ -1,7 +1,9 @@
-import { afterAll } from "vitest";
+import { beforeAll, afterAll } from "vitest";
 import { setup, teardown } from "vitest-mongodb";
 
-setup();
+beforeAll(async () => {
+  await setup();
+});
 
 afterAll(async () => {
   await teardown();

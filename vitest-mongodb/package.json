@@ -45,7 +45,7 @@
   "scripts": {
     "typecheck": "tsc",
     "build": "unbuild",
-    "prepublishOnly": "yarn typecheck && yarn build"
+    "prepublishOnly": "pnpm run typecheck && pnpm run build"
   },
   "dependencies": {
     "debug": "^4.3.4",
