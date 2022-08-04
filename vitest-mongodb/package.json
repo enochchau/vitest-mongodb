@@ -43,7 +43,8 @@
   },
   "scripts": {
     "typecheck": "tsc",
-    "build": "unbuild"
+    "build": "unbuild",
+    "prepublishOnly": "yarn typecheck && yarn build"
   },
   "dependencies": {
     "mongodb-memory-server": "^8.8.0"
