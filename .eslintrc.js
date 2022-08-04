@@ -7,4 +7,8 @@ module.exports = {
   rules: {
     "no-var": "off",
   },
+  env: {
+    es6: true,
+    node: true,
+  },
 };
