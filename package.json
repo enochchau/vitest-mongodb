@@ -1,0 +1,16 @@
+{
+  "workspaces": [
+    "test/*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^3.0.4",
+    "vitest": "^0.20.3"
+  },
+  "scripts": {
+    "test": "vitest -r test/"
+  },
+  "dependencies": {
+    "mongodb-memory-server": "^8.8.0"
+  }
+}
