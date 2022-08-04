@@ -81,7 +81,9 @@ type Options =
 import { afterAll } from "vitest";
 import { setup, teardown } from "vitest-mongodb";
 
-setup({ type: "replSet", serverOptions: { replSet: { count: 4 } } });
+beforeAll(async () => {
+  await setup({ type: "replSet", serverOptions: { replSet: { count: 4 } } });
+});
 
 afterAll(async () => {
   await teardown();
