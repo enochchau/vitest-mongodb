@@ -24,7 +24,6 @@
   "license": "MIT",
   "scripts": {
     "typecheck": "tsc",
-    "lint": "eslint ./src --fix",
     "build": "unbuild"
   },
   "dependencies": {
