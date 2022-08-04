@@ -6,4 +6,3 @@ setup();
 afterAll(async () => {
   await teardown();
 });
-

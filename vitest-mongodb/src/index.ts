@@ -32,5 +32,7 @@ export async function setup(options?: Options) {
 }
 
 export async function teardown() {
-  await globalThis.__MONGO_DB__.stop();
+  if (globalThis.__MONGO_DB__) {
+    await globalThis.__MONGO_DB__.stop();
+  }
 }
