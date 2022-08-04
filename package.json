@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "workspaces": [
-    "test",
+    "example",
     "vitest-mongodb"
   ],
   "private": true,
@@ -16,7 +16,7 @@
     "vitest": "^0.20.3"
   },
   "scripts": {
-    "test": "vitest -r test/",
+    "test": "vitest -r example/",
     "typecheck": "tsc",
     "lint": "eslint ./ --fix",
     "fmt": "prettier --write ."
