@@ -6,8 +6,9 @@
     "coverage": "vitest run --coverage"
   },
   "dependencies": {
+    "mongodb": "^4.8.1",
     "vite": "^3.0.4",
     "vitest": "^0.20.3",
-    "mongodb": "^4.8.1"
+    "vitest-mongodb": "workspace:*"
   }
 }

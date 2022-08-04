@@ -3,18 +3,21 @@ import { MongoMemoryReplSet, MongoMemoryServer } from "mongodb-memory-server";
 type Options =
   | {
       type?: "default";
-      serverOptions: NonNullable<
+      serverOptions?: NonNullable<
         Parameters<typeof MongoMemoryServer["create"]>[0]
       >;
     }
   | {
       type: "replSet";
-      serverOptions: NonNullable<
+      serverOptions?: NonNullable<
         Parameters<typeof MongoMemoryReplSet["create"]>[0]
       >;
     };
 
-export async function setup({ type, serverOptions }: Options) {
+export async function setup(options?: Options) {
+  const type = options?.type ?? "default";
+  const serverOptions = options?.serverOptions;
+
   if (!globalThis.__VITEST_MONGODB_DEFINED__) {
     if (type !== "replSet") {
       globalThis.__MONGO_DB__ = await MongoMemoryServer.create(serverOptions);

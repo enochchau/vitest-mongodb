@@ -899,7 +899,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bson@npm:^4.6.3":
+"bson@npm:^4.6.3, bson@npm:^4.6.5":
   version: 4.6.5
   resolution: "bson@npm:4.6.5"
   dependencies:
@@ -2611,6 +2611,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mongodb@npm:^4.8.1":
+  version: 4.8.1
+  resolution: "mongodb@npm:4.8.1"
+  dependencies:
+    bson: ^4.6.5
+    denque: ^2.0.1
+    mongodb-connection-string-url: ^2.5.2
+    saslprep: ^1.0.3
+    socks: ^2.6.2
+  dependenciesMeta:
+    saslprep:
+      optional: true
+  checksum: 97ff4ebe3fde7b3b5b133d8f7a2e4d6e372c44f8223a6d40b13bb3a705bbbb48ed50958a0fc6b3a33161605723479fced8e0eb83cf7fd5271f7530e6e2d67a2d
+  languageName: node
+  linkType: hard
+
 "mongodb@npm:~4.7.0":
   version: 4.7.0
   resolution: "mongodb@npm:4.7.0"
@@ -3107,6 +3123,8 @@ __metadata:
     eslint: ^8.21.0
     prettier: ^2.7.1
     typescript: ^4.7.4
+    vite: ^3.0.4
+    vitest: ^0.20.3
   languageName: unknown
   linkType: soft
 
@@ -3636,9 +3654,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest-mongodb-668e58@workspace:vitest-mongodb":
+"vitest-mongodb-test@workspace:test":
   version: 0.0.0-use.local
-  resolution: "vitest-mongodb-668e58@workspace:vitest-mongodb"
+  resolution: "vitest-mongodb-test@workspace:test"
+  dependencies:
+    mongodb: ^4.8.1
+    vite: ^3.0.4
+    vitest: ^0.20.3
+    vitest-mongodb: "workspace:*"
+  languageName: unknown
+  linkType: soft
+
+"vitest-mongodb@workspace:*, vitest-mongodb@workspace:vitest-mongodb":
+  version: 0.0.0-use.local
+  resolution: "vitest-mongodb@workspace:vitest-mongodb"
   dependencies:
     "@types/node": ^18.6.3
     "@typescript-eslint/eslint-plugin": ^5.32.0

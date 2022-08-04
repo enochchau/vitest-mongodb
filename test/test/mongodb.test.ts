@@ -1,7 +1,7 @@
 import { MongoClient } from "mongodb";
 import { describe, it, expect } from "vitest";
 
-describe("MongoDB", () => {
+describe("Vitest MongoDB", () => {
   it("connects to mongodb", () => {
     expect(async () => {
       const client = new MongoClient(globalThis.__MONGO_URI__);
@@ -25,7 +25,7 @@ describe("MongoDB", () => {
 
     expect(user).toHaveProperty("username");
     expect(user).toHaveProperty("password");
-    expect(user.username).toBe("test123");
-    expect(user.password).toBe("test123");
+    expect(user?.username).toBe("test123");
+    expect(user?.password).toBe("test123");
   });
 });

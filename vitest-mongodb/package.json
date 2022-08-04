@@ -1,4 +1,15 @@
 {
+  "name": "vitest-mongodb",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "devDependencies": {
     "@types/node": "^18.6.3",
     "@typescript-eslint/eslint-plugin": "^5.32.0",
@@ -10,6 +21,7 @@
     "vite": "^3.0.4",
     "vitest": "^0.20.3"
   },
+  "license": "MIT",
   "scripts": {
     "typecheck": "tsc",
     "lint": "eslint ./src --fix",
