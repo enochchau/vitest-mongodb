@@ -27,5 +27,6 @@
     "typecheck": "tsc",
     "lint": "eslint ./ --fix",
     "fmt": "prettier --write ."
-  }
+  },
+  "packageManager": "yarn@3.2.2"
 }
