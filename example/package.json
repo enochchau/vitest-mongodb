@@ -10,7 +10,7 @@
     "mongodb": "^4.8.1",
     "vite": "^3.0.4",
     "vitest": "^0.20.3",
-    "vitest-mongodb": "^0.0.2"
+    "vitest-mongodb": "workspace:*"
   },
   "devDependencies": {
     "c8": "^7.12.0"
