@@ -2,6 +2,14 @@
 
 Run your tests with Vitest and MongoDB Memory server.
 
+## Installation
+
+```
+yarn add -D vitest-mongodb
+npm i -D vitest-mongodb
+pnpm add -D vitest-mongodb
+```
+
 ## Usage
 
 An example project can be found at [`/example`](/example).
