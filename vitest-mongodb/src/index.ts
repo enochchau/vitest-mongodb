@@ -7,13 +7,13 @@ type Options =
   | {
       type?: "default";
       serverOptions?: NonNullable<
-        Parameters<typeof MongoMemoryServer["create"]>[0]
+        Parameters<(typeof MongoMemoryServer)["create"]>[0]
       >;
     }
   | {
       type: "replSet";
       serverOptions?: NonNullable<
-        Parameters<typeof MongoMemoryReplSet["create"]>[0]
+        Parameters<(typeof MongoMemoryReplSet)["create"]>[0]
       >;
     };
 
