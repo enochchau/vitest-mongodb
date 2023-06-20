@@ -7,7 +7,7 @@ Run your tests with Vitest and MongoDB Memory server.
 ```
 yarn add -D vitest-mongodb
 npm i -D vitest-mongodb
-pnpm add -D vitest-mongodb
+pnpm i -D vitest-mongodb
 ```
 
 ## Usage
