@@ -4,9 +4,21 @@ Run your tests with Vitest and MongoDB Memory server.
 
 ## Installation
 
+**yarn**
+
 ```
 yarn add -D vitest-mongodb
+```
+
+**npm**
+
+```
 npm i -D vitest-mongodb
+```
+
+**pnpm**
+
+```
 pnpm i -D vitest-mongodb
 ```
 
