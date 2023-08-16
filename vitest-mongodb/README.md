@@ -86,7 +86,7 @@ type Options =
 
 ```typescript
 // ./setup/mongo-memory-server.ts
-import { afterAll } from "vitest";
+import { afterAll, beforeAll } from "vitest";
 import { setup, teardown } from "vitest-mongodb";
 
 beforeAll(async () => {
