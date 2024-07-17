@@ -49,6 +49,6 @@
   },
   "dependencies": {
     "debug": "^4.3.4",
-    "mongodb-memory-server": "^8.12.0"
+    "mongodb-memory-server": "^9.2.0"
   }
 }
