@@ -1,6 +1,6 @@
 {
   "name": "vitest-mongodb",
-  "version": "0.0.5",
+  "version": "1.0.0",
   "description": "Run your tests using Vitest and MongoDB in Memory server.",
   "author": "Enoch Chau <enoch965@gmail.com>",
   "homepage": "https://github.com/ec965/vitest-mongodb#readme",
